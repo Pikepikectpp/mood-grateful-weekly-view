@@ -24,11 +24,11 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
 
   if (entries.length === 0) {
     return (
-      <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+      <Card className="bg-white/70 backdrop-blur-sm border-green-100 shadow-lg">
         <CardContent className="text-center py-12">
-          <Heart className="mx-auto text-gray-300 h-16 w-16 mb-4" />
-          <h3 className="text-xl text-gray-600 mb-2">No entries yet this week</h3>
-          <p className="text-gray-500">Start your gratitude journey by making your first daily entry!</p>
+          <Heart className="mx-auto text-pink-300 h-16 w-16 mb-4" />
+          <h3 className="text-xl text-slate-600 mb-2">No entries yet this week, Pike Pike</h3>
+          <p className="text-slate-500">Start your gratitude journey by making your first daily entry! 🌸</p>
         </CardContent>
       </Card>
     );
@@ -36,13 +36,13 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
 
   return (
     <div className="space-y-6">
-      <Card className="bg-gradient-to-r from-blue-500 to-green-500 text-white border-0 shadow-lg">
+      <Card className="bg-gradient-to-r from-green-400 to-pink-400 text-white border-0 shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl flex items-center justify-center gap-3">
             <Heart className="h-6 w-6" />
-            Your Week of Gratitude
+            Pike Pike's Week of Gratitude
           </CardTitle>
-          <p className="text-blue-100">
+          <p className="text-green-100">
             {weekInfo.startDate} - {weekInfo.endDate}
           </p>
         </CardHeader>
@@ -50,18 +50,18 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
 
       <div className="grid gap-4">
         {entries.map((entry, index) => (
-          <Card key={entry.date} className="bg-white/80 backdrop-blur-sm border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card key={entry.date} className="bg-white/70 backdrop-blur-sm border-blue-100 shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-green-100 rounded-full flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-pink-100 rounded-full flex items-center justify-center text-2xl shadow-sm">
                     {entry.mood}
                   </div>
                 </div>
                 <div className="flex-grow">
                   <div className="flex items-center gap-2 mb-2">
-                    <Calendar className="h-4 w-4 text-gray-500" />
-                    <span className="text-sm text-gray-500 font-medium">
+                    <Calendar className="h-4 w-4 text-slate-500" />
+                    <span className="text-sm text-slate-500 font-medium">
                       {new Date(entry.date).toLocaleDateString('en-US', { 
                         weekday: 'long', 
                         month: 'short', 
@@ -69,7 +69,7 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
                       })}
                     </span>
                   </div>
-                  <p className="text-gray-800 text-lg italic leading-relaxed">
+                  <p className="text-slate-700 text-lg italic leading-relaxed">
                     "{entry.gratitude}"
                   </p>
                 </div>
@@ -80,14 +80,14 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
       </div>
 
       {entries.length > 0 && (
-        <Card className="bg-gradient-to-r from-pink-50 to-orange-50 border-pink-200 shadow-md">
+        <Card className="bg-gradient-to-r from-pink-100 to-blue-100 border-pink-200 shadow-md">
           <CardContent className="p-6 text-center">
-            <Heart className="mx-auto text-pink-500 h-8 w-8 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              You've captured {entries.length} moment{entries.length !== 1 ? 's' : ''} of gratitude this week!
+            <Heart className="mx-auto text-pink-400 h-8 w-8 mb-3" />
+            <h3 className="text-lg font-semibold text-slate-700 mb-2">
+              You've captured {entries.length} moment{entries.length !== 1 ? 's' : ''} of gratitude this week, Pike Pike! 
             </h3>
-            <p className="text-gray-600">
-              Each entry is a step toward a more mindful and appreciative life. Keep it up! 🌟
+            <p className="text-slate-600">
+              Each entry is a step toward a more mindful and appreciative life. Keep it up! 🌸✨
             </p>
           </CardContent>
         </Card>

@@ -26,12 +26,12 @@ export const MoodSelector: React.FC<MoodSelectorProps> = ({ selectedMood, onMood
           onClick={() => onMoodSelect(mood.value)}
           className={`p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 ${
             selectedMood === mood.value
-              ? 'bg-gradient-to-br from-blue-100 to-green-100 ring-2 ring-blue-400 scale-110'
-              : 'bg-gray-50 hover:bg-gray-100'
+              ? 'bg-gradient-to-br from-green-100 to-pink-100 ring-2 ring-green-300 scale-110 shadow-md'
+              : 'bg-gradient-to-br from-blue-50 to-green-50 hover:from-pink-50 hover:to-blue-50 hover:shadow-md'
           }`}
         >
           <div className="text-3xl mb-2">{mood.emoji}</div>
-          <div className="text-sm text-gray-600 font-medium">{mood.label}</div>
+          <div className="text-sm text-slate-600 font-medium">{mood.label}</div>
         </button>
       ))}
     </div>
