@@ -27,17 +27,17 @@ const Index = () => {
 
   const getPersonalizedGreeting = () => {
     const greetings = [
-      "Hi Pike Pike! ✨",
-      "Good morning, Pike Pike! 🌅",
-      "Hello there, Pike Pike! 🌸",
-      "Hey Pike Pike! 🦋",
-      "Morning sunshine, Pike Pike! ☀️",
-      "Greetings, Pike Pike! 🌿",
-      "Welcome back, Pike Pike! 💚"
+      "Hi Hossain! ✨",
+      "Good morning, Hossain! 🌅",
+      "Hello there, Hossain! 🌸",
+      "Hey Hossain! 🦋",
+      "Morning sunshine, Hossain! ☀️",
+      "Greetings, Hossain! 🌿",
+      "Welcome back, Hossain! 💚"
     ];
     
     const today = new Date();
-    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+    const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
     return greetings[dayOfYear % greetings.length];
   };
 
@@ -77,7 +77,7 @@ const Index = () => {
           <div className="flex items-center justify-between mb-8">
             <h1 className="text-3xl font-bold text-slate-700 flex items-center gap-2">
               <Heart className="text-pink-400" />
-              Pike Pike's Weekly Gratitude
+              Hossain's Weekly Gratitude
             </h1>
             <Button 
               onClick={() => setShowWeekly(false)}
@@ -110,7 +110,7 @@ const Index = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-green-600 flex items-center justify-center gap-2">
                 <Heart className="text-pink-400" />
-                Today's Entry Complete, Pike Pike! 🌸
+                Today's Entry Complete, Hossain! 🌸
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center space-y-4">
@@ -137,7 +137,7 @@ const Index = () => {
           <div className="space-y-8">
             <Card className="bg-white/70 backdrop-blur-sm border-pink-100 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-center text-slate-700">How are you feeling today, Pike Pike?</CardTitle>
+                <CardTitle className="text-center text-slate-700">How are you feeling today, Hossain?</CardTitle>
               </CardHeader>
               <CardContent>
                 <MoodSelector selectedMood={selectedMood} onMoodSelect={setSelectedMood} />

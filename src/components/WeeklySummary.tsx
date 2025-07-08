@@ -27,7 +27,7 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
       <Card className="bg-white/70 backdrop-blur-sm border-green-100 shadow-lg">
         <CardContent className="text-center py-12">
           <Heart className="mx-auto text-pink-300 h-16 w-16 mb-4" />
-          <h3 className="text-xl text-slate-600 mb-2">No entries yet this week, Pike Pike</h3>
+          <h3 className="text-xl text-slate-600 mb-2">No entries yet this week, Hossain</h3>
           <p className="text-slate-500">Start your gratitude journey by making your first daily entry! 🌸</p>
         </CardContent>
       </Card>
@@ -40,7 +40,7 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl flex items-center justify-center gap-3">
             <Heart className="h-6 w-6" />
-            Pike Pike's Week of Gratitude
+            Hossain's Week of Gratitude
           </CardTitle>
           <p className="text-green-100">
             {weekInfo.startDate} - {weekInfo.endDate}
@@ -84,7 +84,7 @@ export const WeeklySummary: React.FC<WeeklySummaryProps> = ({ entries }) => {
           <CardContent className="p-6 text-center">
             <Heart className="mx-auto text-pink-400 h-8 w-8 mb-3" />
             <h3 className="text-lg font-semibold text-slate-700 mb-2">
-              You've captured {entries.length} moment{entries.length !== 1 ? 's' : ''} of gratitude this week, Pike Pike! 
+              You've captured {entries.length} moment{entries.length !== 1 ? 's' : ''} of gratitude this week, Hossain! 
             </h3>
             <p className="text-slate-600">
               Each entry is a step toward a more mindful and appreciative life. Keep it up! 🌸✨
